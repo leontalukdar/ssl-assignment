@@ -9,6 +9,9 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+
     <style>
         .navbar-fixed-left {
             width: 10%;
@@ -24,7 +27,7 @@
 
         .navbar-fixed-left + .container {
             padding-top: 30px;
-            padding-left: 10px;
+            padding-left: 100px;
         }
 
         /* On using dropdown menu (To right shift popuped) */
