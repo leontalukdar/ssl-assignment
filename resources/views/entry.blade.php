@@ -10,7 +10,7 @@
             {{csrf_field()}}
             <div class="form-group">
                 <label for="amount">Amount</label>
-                <input type="text" name="amount" class="form-control" id="amount" aria-describedby="amount" placeholder="Enter amount">
+                <input type="text" name="amount" class="form-control" id="amount" aria-describedby="amount" placeholder="Enter amount" required>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
@@ -18,7 +18,7 @@
             </div>
             <div class="form-group">
                 <label for="typeSelect">Select Type</label>
-                <select class="form-control" id="typeSelect" name="type">
+                <select class="form-control" id="typeSelect" name="type" required>
                     <option value="1">INCOME</option>
                     <option value="2">COST</option>
                 </select>

@@ -16,3 +16,5 @@ Route::get('/', 'AccountController@index')->name('account.index');
 Route::get('/account_entry', 'AccountController@entry')->name('account.entry');
 
 Route::post('account_update', 'AccountController@update')->name('account.update');
+
+Route::get('/account_entry_ajax', 'AccountController@entryAjax')->name('account.entry.ajax');
