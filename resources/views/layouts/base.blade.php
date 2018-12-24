@@ -43,7 +43,7 @@
         <li><a href={{Route('account.index')}}>Dashboard</a></li>
         <li><a href={{Route('account.entry')}}>Account Entry</a></li>
         <li><a href={{Route('product.index')}}>Product List</a></li>
-        <li><a href="#">Cart</a></li>
+        <li><a href={{Route('cart.index')}}>Cart</a></li>
         <li><a href="#">Cricket ScoreBoard</a></li>
     </ul>
 </div>

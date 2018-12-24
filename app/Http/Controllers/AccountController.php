@@ -13,14 +13,6 @@ class AccountController extends Controller
 {
     public function index()
     {
-//        $incomes = Entry::select([
-//            'type',
-//            DB::raw('Date(created_at) as date'),
-//            DB::raw("case `type` when 'INCOME' then SUM(amount) when 'COST' then SUM(-amount) end as balance")
-//
-//        ])->groupBy(DB::raw('Date(created_at)'), 'type')->get()->toArray();
-//
-//        dd($incomes);
         $income = Entry::where('type', "INCOME")
             ->select([
                 'type',
@@ -88,38 +80,4 @@ class AccountController extends Controller
         ], 200);
     }
 
-//    private function getIncomes()
-//    {
-//        $incomes = Entry::select([
-//                DB::raw("case `type` when 'INCOME' then SUM(amount) as total_income when 'COST' then SUM(amount) as total_cost end"),
-//                DB::raw('Date(created_at) as date')
-//            ])->groupBy(DB::raw('Date(created_at)'))->get()->toArray();
-//
-//        foreach ($incomes as $income){
-//            array_push($this->balances, [
-//                "cur_balance" => $this->curBalance += $income['total_income'],
-//                "date" => $income['date']
-//            ]);
-//        }
-//
-//        return $incomes;
-//    }
-//
-//    private function getCosts()
-//    {
-//        $incomes = Entry::where('type', 'INCOME')
-//            ->select([
-//                DB::raw("SUM(amount) as total_income"),
-//                DB::raw('Date(created_at) as date')
-//            ])->groupBy(DB::raw('Date(created_at)'))->get()->toArray();
-//
-//        foreach ($incomes as $income){
-//            array_push($this->balances, [
-//                "cur_balance" => $this->curBalance += $income['total_income'],
-//                "date" => $income['date']
-//            ]);
-//        }
-//
-//        return $incomes;
-//    }
 }

@@ -20,3 +20,7 @@ Route::post('account_update', 'AccountController@update')->name('account.update'
 Route::get('/account_entry_ajax', 'AccountController@entryAjax')->name('account.entry.ajax');
 
 Route::get('/porducts', 'ProductController@index')->name('product.index');
+
+Route::get('/cart_index', 'CartController@index')->name('cart.index');
+Route::post('/cart_add', 'CartController@add')->name('cart.add');
+Route::post('/cart_update', 'CartController@update')->name('cart.update');
