@@ -36,4 +36,12 @@ class CartController extends Controller
 
         return redirect()->route('cart.index')->with('msg', 'Cart Updated Successfully');
     }
+
+    public function remove(Request $request)
+    {
+        Cart::remove($request->rowId);
+
+        return redirect()->route('cart.index')->with('remove_msg', 'Cart Item Has Been Removed');
+    }
+
 }

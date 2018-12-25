@@ -24,3 +24,6 @@ Route::get('/porducts', 'ProductController@index')->name('product.index');
 Route::get('/cart_index', 'CartController@index')->name('cart.index');
 Route::post('/cart_add', 'CartController@add')->name('cart.add');
 Route::post('/cart_update', 'CartController@update')->name('cart.update');
+Route::post('/cart_remove', 'CartController@remove')->name('cart.remove');
+
+Route::get('/scoreboard', 'ScoreBoardController@index')->name('scoreboard.index');

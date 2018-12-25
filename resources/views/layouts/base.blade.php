@@ -8,7 +8,7 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.33.1/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
@@ -44,7 +44,7 @@
         <li><a href={{Route('account.entry')}}>Account Entry</a></li>
         <li><a href={{Route('product.index')}}>Product List</a></li>
         <li><a href={{Route('cart.index')}}>Cart</a></li>
-        <li><a href="#">Cricket ScoreBoard</a></li>
+        <li><a href={{Route('scoreboard.index')}}>Cricket ScoreBoard</a></li>
     </ul>
 </div>
 <div class="container">

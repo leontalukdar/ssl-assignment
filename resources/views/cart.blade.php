@@ -2,14 +2,14 @@
 
 @section('content')
     <div class="row">
-        <h2>
+        <h3>
             My Cart
-        </h2>
+        </h3>
     </div>
 
     <div class="row">
-        <h3>Shopping Cart</h3>
         <p style="color: forestgreen">{{Session::get('msg')}}</p>
+        <p style="color: red">{{Session::get('remove_msg')}}</p>
         <table class="table">
             <thead>
             <tr>
@@ -26,12 +26,25 @@
                 <td>{{$cartProduct->id}}</td>
                 <td>{{$cartProduct->name}}</td>
                 <td>
-                    <form method="post" action="{{Route('cart.update')}}">
-                        {{csrf_field()}}
-                        <input type="hidden" value="{{$cartProduct->rowId}}" name="rowId">
-                        <input type="number" value="{{$cartProduct->qty}}" min="1" name="qty">
-                        <button class="btn-success" type="submit">Update</button>
-                    </form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <form method="post" action="{{Route('cart.update')}}">
+                                {{csrf_field()}}
+                                <input type="hidden" value="{{$cartProduct->rowId}}" name="rowId">
+                                <input type="number" value="{{$cartProduct->qty}}" min="1" name="qty" style="width: 50px">
+                                <button class="btn-success" type="submit">Update</button>
+                            </form>
+                        </div>
+                        <div class="col-md-1">
+                            <form method="post" action="{{Route('cart.remove')}}">
+                                {{csrf_field()}}
+                                <input type="hidden" value="{{$cartProduct->rowId}}" name="rowId">
+                                <button class="btn-danger" type="submit">Remove</button>
+                            </form>
+                        </div>
+
+
+                    </div>
                 </td>
                 <td>{{$cartProduct->price}} BDT</td>
                 <td>{{$cartProduct->price * $cartProduct->qty}} BDT</td>
