@@ -1,0 +1,8 @@
+* Make sure you have all the dependencies to run a Laravel Project
+
+1. Clone project from github.
+2. Copy .env.example to .env file.
+3. Edit .env file to connect with your database.
+4. Run command "Composer Install".
+5. Run command "php artisan migrate".
+6. Run the project with "php artisan serve" or any existing server like xampp or nginx.
