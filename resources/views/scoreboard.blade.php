@@ -210,25 +210,11 @@
         }
 
         function handleDottBall() {
-            totalBalls += 1;
-            overs = Math.floor(totalBalls / 6);
-            balls = totalBalls % 6;
-            if (curPlayer) {
-                if (totalBalls % 6 ===0 ){
-                    curPlayer = !curPlayer;
-                    $('#firstPlayer').css("color", "");
-                    $('#secondPlayer').css("color","green");
-                }
-
-            } else {
-                if (totalBalls % 6 ===0 ){
-                    curPlayer = !curPlayer;
-                    $('#firstPlayer').css("color", "green");
-                    $('#secondPlayer').css("color","");
-                }
-            }
-
-            $('#overs').text("Overs: "+ overs + "." + balls);
+            swal({
+                title: "<b class='btn btn-warning'>Dot Ball</b>",
+                html: "A dot ball occurred as batsman wasn't ready.",
+                confirmButtonText: "<u>Ok</u>",
+            });
         }
 
         function handleExtra() {
